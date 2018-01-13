@@ -57,6 +57,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/users', (req, res) => {
+  // res.send('About Page');
+  res.render('users.hbs', {
+    pageTitle: 'User Page',
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to handle request'
